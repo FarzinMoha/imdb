@@ -1,4 +1,4 @@
-import { ReactNode, SetStateAction } from "react";
+import React, { ReactNode, SetStateAction } from "react";
 
 export type iconProps = {
   width: number;
@@ -10,6 +10,7 @@ export type inputProps = {
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   dropDown?: any;
+  rootClass?:string
 };
 
 export type inputDropDownProps = {
@@ -27,4 +28,14 @@ export type dropDownButtonProps = {
   openDrop:boolean
   dropDownItem:string
 
+}
+
+export type navLeftItemProps = {
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
+  content?: string | ReactNode ;
+  path?:string
+}
+export type navLeftProps = {
+  setShowSearchHidden: React.Dispatch<SetStateAction<boolean>>
 }
