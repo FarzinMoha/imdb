@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const UpNextItem = () => {
     const [hover , setHover] = useState(false)
   return (
-    <div className="w-full h-[180px]  bg-lightBlack">
+    <div className="w-full h-[150px]  bg-lightBlack">
       <div className="w-full h-full px-2 py-3">
         <div className="w-full h-full flex justify-start items-center">
           <Image src="/asset/image1.jpeg" alt="film" width={90} height={150} />

@@ -4,9 +4,10 @@ import HeroSection from "@/components/home-components/hero-section/HeroSection";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen">
-      <Navbar/>
+    <main className="w-screen">
+      {/* <Navbar/> */}
       <HeroSection/>
+      <div className="w-full bg-slate-500 h-7">s</div>
     </main>
   )
 }

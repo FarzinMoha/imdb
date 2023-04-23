@@ -20,6 +20,7 @@ const SlideShow = () => {
           width: "50px",
           height: "70px",
           borderRadius: "10px",
+          transform:'translateY(-50px)'
         }}
       >
         <ArrowLeftIcon
@@ -39,6 +40,7 @@ const SlideShow = () => {
           width: "50px",
           height: "70px",
           borderRadius: "10px",
+          transform:'translateY(-50px)'
         }}
       >
         <ArrowRightIcon
@@ -54,7 +56,7 @@ const SlideShow = () => {
   return (
     <Slide  duration={5000} transitionDuration={500} infinite={true} autoplay={true} {...properties}>
       <div className="each-slide-effect">
-        <div className="w-96 h-[600px]" style={{ backgroundColor: `red` }}>
+        <div className="w-full h-[600px] mx-auto align-middle">
           <SlideItem/>
         </div>
       </div>
