@@ -15,8 +15,8 @@ const FeatureSection = () => {
     {
         breakpoint: 500,
         settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 3,
+            slidesToScroll: 3
         }
     }
 ];
@@ -32,7 +32,7 @@ const FeatureSection = () => {
           <FeatureSileItem height={250} type='photos'/>
           <FeatureSileItem height={250} type='photos'/>
           <FeatureSileItem height={250} type='photos'/>
-          <FeatureSileItem height={250} type='photos'/>
+          <FeatureSileItem height={250} type='photos'/> 
           <FeatureSileItem height={250} type='photos'/>
         </SlideShow>
     </div>
