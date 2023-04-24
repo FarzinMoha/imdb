@@ -8,7 +8,7 @@ import { navLeftProps } from "@/type/type";
 
 const NavLeft = ({setShowSearchHidden}:navLeftProps) => {
   return (
-    <div className="flex justify-center items-center min-[1024px]:border-l ml-5">
+    <div className="flex justify-center items-center min-[1024px]:border-l ml-5 max-[400px]:ml-0">
       <div className="max-[1024px]:hidden">
       <NavLeftItem
         leftIcon={<WatchListIcon width={24} height={24} color={pallet.white} />}

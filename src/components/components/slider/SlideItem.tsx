@@ -1,13 +1,16 @@
 import AddWhatchList from "@/icon/AddWhatchList";
 import PlayCircleIcon from "@/icon/PlayCircleIcon";
 import { pallet } from "@/pallet/pallete";
+import { slideItemProps } from "@/type/type";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const SlideItem = () => {
+const SlideItem = ({height}:slideItemProps) => {
   const [addIconColor , setAddIconColor] = useState('rgb(0,0,0,.5)')
   const [playIconColor , setPlayIconColor] = useState(pallet.white)
   return (
+    <div className="each-slide-effect">
+    <div className={`w-full h-[${height}px] mx-auto align-middle`}>
     <div
     onMouseEnter={()=>setPlayIconColor(pallet.imdbYellow)}
     onMouseLeave={()=>setPlayIconColor(pallet.white)}
@@ -24,7 +27,7 @@ const SlideItem = () => {
 
           <div className=""><PlayCircleIcon width={70} height={70} color={playIconColor} /></div>
           <div className="h-[100px] relative flex flex-col justify-center items-start text-white pl-6 max-[650px]:pl-0">
-            <h2 className="w-[350px] whitespace-normal text-xl max-[650px]:w-[300px] max-[650px]:text max-[400px]:w-[200px] max-[400px]:text-xs">The "Barry" Cast Reveal the Scenes They'll Never Forget</h2>
+            <h2 className="w-[350px] whitespace-normal text-xl max-[650px]:w-[300px] max-[650px]:text max-[400px]:w-[170px] max-[400px]:text-xs">The "Barry" Cast Reveal the Scenes They'll Never Forget</h2>
             <h2 className="w-[350px] whitespace-normal text-l mt-1">Watch the Interview</h2>
             <span className="absolute bottom-0 right-10 text-lg text-white max-[650px]:top-[-50px] max-[650px]:left-[100px]">04:30</span>
           </div>
@@ -43,6 +46,8 @@ const SlideItem = () => {
 
       <div className="absolute bottom-0 left-0 w-full h-[50px] bg-black"></div>
       <div style={{background:'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)'}} className="absolute bottom-[50px] left-0 w-full h-[150px] bg-gradiantBlack"></div>
+    </div>
+    </div>
     </div>
   );
 };

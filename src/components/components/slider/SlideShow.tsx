@@ -5,13 +5,15 @@ import SlideItem from "./SlideItem";
 import { pallet } from "@/pallet/pallete";
 import ArrowLeftIcon from "@/icon/ArrowLeftIcon";
 import ArrowRightIcon from "@/icon/ArrowRightIcon";
-
-const SlideShow = () => {
+import { slideShowProps } from "@/type/type";
+const SlideShow : React.FC<slideShowProps> = ({ buttonUp ,children , responsive ,slidesToScroll, slidesToShow,indicators}) => {
   const [hoverLeft, setHoverLeft] = useState(false);
   const [hoverRight, setHoverRight] = useState(false);
+  const btnPosition = buttonUp ? 'translateY(-50px)' : 'translateY(0px)'
   const properties = {
     prevArrow: (
       <button
+      className="max-[500px]:hidden"
         onMouseEnter={() => setHoverLeft(true)}
         onMouseLeave={() => setHoverLeft(false)}
         style={{
@@ -20,7 +22,7 @@ const SlideShow = () => {
           width: "50px",
           height: "70px",
           borderRadius: "10px",
-          transform:'translateY(-50px)'
+          transform:btnPosition 
         }}
       >
         <ArrowLeftIcon
@@ -32,6 +34,7 @@ const SlideShow = () => {
     ),
     nextArrow: (
       <button
+      className="max-[500px]:hidden"
         onMouseEnter={() => setHoverRight(true)}
         onMouseLeave={() => setHoverRight(false)}
         style={{
@@ -40,7 +43,7 @@ const SlideShow = () => {
           width: "50px",
           height: "70px",
           borderRadius: "10px",
-          transform:'translateY(-50px)'
+          transform:btnPosition 
         }}
       >
         <ArrowRightIcon
@@ -54,12 +57,8 @@ const SlideShow = () => {
   };
 
   return (
-    <Slide  duration={5000} transitionDuration={500} infinite={true} autoplay={true} {...properties}>
-      <div className="each-slide-effect">
-        <div className="w-full h-[600px] mx-auto align-middle">
-          <SlideItem/>
-        </div>
-      </div>
+    <Slide  duration={5000} transitionDuration={500} slidesToScroll={slidesToScroll} slidesToShow={slidesToShow} indicators={indicators} infinite={true} autoplay={true} {...properties} responsive={responsive}>
+            {children}
     </Slide>
   );
 };

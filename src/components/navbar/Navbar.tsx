@@ -16,10 +16,10 @@ export const Navbar = () => {
     const [showSearchHidden , setShowSearchHidden] = useState(false)
 
   return (
-    <nav className="h-16 relative w-screen flex items-center justify-center px-10 bg-lightBlack max-[600px]:justify-between max-[600px]:px-2 ">
+    <nav className="h-16 text-sm relative w-screen flex items-center justify-center px-10 bg-lightBlack max-[600px]:justify-between max-[600px]:px-2 max-[400px]:px-0">
         <div className=" flex justify-center items-center max-[1024px]:flex-row-reverse">
-      <div className="mr-5 cursor-pointer"><LogoIcon width={80} height={40} /></div>
-      <div className="flex justify-center items-center cursor-pointer hover:bg-lighterBlack mx-2 rounded p-2">
+      <div className="mr-5 cursor-pointer max-[400px]:mr-0"><LogoIcon width={80} height={40} /></div>
+      <div className="flex justify-center items-center cursor-pointer hover:bg-lighterBlack mx-2 rounded p-2  max-[400px]:mx-0  max-[400px]:p-[10px]">
         <BergurMenuIcon width={30} height={25} color={pallet.white} />
         <span className="text-white max-[1024px]:hidden">Menu</span>
       </div>

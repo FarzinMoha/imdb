@@ -39,3 +39,30 @@ export type navLeftItemProps = {
 export type navLeftProps = {
   setShowSearchHidden: React.Dispatch<SetStateAction<boolean>>
 }
+
+export type slideShowProps = {
+  buttonUp?:boolean
+  children: ReactNode;
+  responsive?:any
+  slidesToScroll?:number 
+  slidesToShow?:number 
+  indicators?:boolean
+ 
+}
+export type slideItemProps = {
+  height:number
+  type?:string
+}
+
+export type titleProps = {
+  title:string
+}
+
+export type insideTitleProps = {
+  text1:string 
+  text2:string
+  titleIcon?:boolean
+}
+export type whatToWatchProps = {
+  height:number
+}
